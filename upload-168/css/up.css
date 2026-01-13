@@ -1,0 +1,79 @@
+<style>
+input{
+  box-sizing: content-box;
+}
+table, input[type="submit"] {
+        font-size: 28px;
+}
+#title {
+        font-size: 36px;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        padding: 12px;
+}
+#delete {
+        font-size: 18px;
+        padding: 24px;
+}
+
+input[type="file"]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: 24px 26px 28px 26px;
+  border-radius: 0.2em;
+  background-color: #a29bfe;
+  transition: 1s;
+        font-size: 48px;
+        margin-top: 20px;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+        size: 42px;
+}
+input[type=file]{
+        font-size: 48px;
+}
+
+#foo {
+  border: 2px solid #6c5ce7;
+        padding: 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 10px;
+  border-radius: 0.2em;
+  transition: 1s;
+        font-size: 68px;
+}
+/* Overlay spinner */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;             /* center spinner */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  pointer-events: none;      /* allow clicks to pass through */
+}
+/* Hide spinner by default */
+.spinner-overlay.hidden {
+  display: none;
+}
+/* Spinner itself */
+.spinner {
+  border: 12px solid #e0e0e0;
+  border-top: 12px solid #3498db;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  animation: spin 1s linear infinite;
+  pointer-events: auto;      /* keep animation running */
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
